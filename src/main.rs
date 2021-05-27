@@ -85,10 +85,10 @@ impl State {
         ((x * self.scale + self.translate.0), (y * self.scale + self.translate.1))
     }
 
-    fn change_zoom_to(&mut self, z: u32) {
-        self.zoom = z;
-        if self.zoom < 1 { self.zoom = 1 }
-        else if self.zoom > 8 { self.zoom = 8 }
+    fn change_zoom_to(&mut self, z: i32) {
+        self.scale = z;
+        if self.scale < 1 { self.scale = 1 }
+        else if self.scale > 8 { self.scale = 8 }
     }
 
     fn update(&mut self) {
