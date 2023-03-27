@@ -147,7 +147,7 @@ fn main() {
                  => match key {
                         Keycode::Space
                          => state.pause = !state.pause,
-                        Keycode::R
+                        Keycode::C
                          => state.living_cells = HashSet::new(),
                         Keycode::F
                          => { window.set_fullscreen
